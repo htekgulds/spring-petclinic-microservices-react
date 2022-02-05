@@ -12,10 +12,14 @@ logging:
         boot: INFO
         web: INFO
 
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+
 ---
 spring:
   config:
     activate:
       on-profile: docker
     import: configserver:http://config-server:8888
-
